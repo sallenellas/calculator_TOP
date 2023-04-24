@@ -1,0 +1,49 @@
+.calculator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 50px;
+    background-color: rgb(61, 90, 133);
+    width: 500px;
+}
+
+.display{
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    width: 300px;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: 'Audiowide', cursive;
+    font-size: 24px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.numberButton, .decimalButton{
+    display: flex;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    font-size: 48px;
+    width: 72px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px black;
+    font-family: 'Audiowide', cursive;
+}
