@@ -1,80 +1,69 @@
-.calculator{
-    display: flex;
-    align-items: center;
+*, ::before, ::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #CBCE91FF,#EA738DFF);
+}
+
+.calculator-grid {
+    display: grid;
     justify-content: center;
-    background-color: black;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    align-items: center;
+.calculator-grid {
+    display: grid;
     justify-content: center;
-    gap: 100px;
-    padding: 50px;
-    background-color: rgb(61, 90, 133);
-    width: 800px;
-    margin: 100px;
-    border-radius: 50px;
-    border-style:groove;
-    border-color: darkblue;
-}
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    }
 
-.display{
-    background-color: rgb(185, 185, 185);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 72px;
-    width: 300px;
-    border-style: solid;
-    border-radius: 10px;
-    font-family: 'Audiowide', cursive;
-    font-size: 24px;
-}
+    .calculator-grid > button {
+      cursor: pointer;
+      font-size: 2rem;
+      border: 1px, solid #FFFFFF;
+      outline: none;
+      background-color: rbga(255, 255, 255, 0.75);
+    }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
+      .calculator-grid > button:hover {
+        background-color: #a9a9a9;
+      }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
+      .span-two {
+        grid-column: span 2;
+        color: #adf802;
+        background-color: rgba(139, 0, 139, 0.8);
+      }
 
-.column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: left;
-    gap: 10px;
-}
+      .output{
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
 
-.numberButton, .decimalButton{
-    display: flex;
-    justify-content: center;
-    background-color: darkblue;
-    color: white;
-    font-size: 48px;
-    width: 72px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 3px black;
-    font-family: 'Audiowide', cursive;
-}
+      .output .previous-operand{
+        color: rgba(255,255, 255, 0.75);
+        font-size: 1.5rem;
+      }
 
-.operations{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(235, 138, 74);
-    color: white;
-    font-size: 48px;
-    width: 72px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 3px black;
-    font-family: 'Audiowide', cursive;
-}
+      .output .current-operand{
+        color: white;
+        font-size: 2.5rem;
+      }
